@@ -13,7 +13,10 @@
 - 이 데이터셋은 신용카드 회사의 고객 정보를 포함하고 있으며, 각 행에는 고객 ID와 나이, 연봉, 결혼 여부, 신용카드 한도, 신용카드 카테고리 등과 같은 다양한 특성이 포함되어 있습니다.
 - “Unknown” 데이터 처리를 위해 다섯 가지 방법을 적용하여 데이터를 전처리하고, 각각의 전처리된 데이터에 대해 모델을 학습시켜 성능을 비교하였습니다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/4b69bdd7-73b4-427a-a9c5-5f4fdf8a4618/Untitled.png)
+<img src="https://github.com/PARKYUNSU/chun/assets/125172299/b8ca27ff-5e9e-4c4d-9478-c6f28d18c5ea" width="500">
+
+
+
 
 ### **전처리 방법**
 
@@ -48,25 +51,30 @@ VIF가 높고 공차가 낮은 컬럼 제거: 'Customer_Age', 'Months_on_book', 
 
 **PCA 평가**
 
-![df1 (최빈값)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/6c9d6d5b-d8d5-46f5-8098-1fb3263af2a1/Untitled.png)
-
-df1 (최빈값)
-
-![df3 (Hot-Deck 방법 사용)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/ceebdf20-a6d4-4f90-8574-72a493e240ce/Untitled.png)
-
-df3 (Hot-Deck 방법 사용)
-
-![df5 (결측값 사용)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/20a91729-62fd-4ea7-96db-abff1dc995e8/Untitled.png)
-
-df5 (결측값 사용)
-
-![df2 (완전삭제)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/f1d7f5dc-8c35-44e9-8c74-a4b92e6cc80d/Untitled.png)
-
-df2 (완전삭제)
-
-![df4 (KNN 기법 사용)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/18d0b427-5371-4fc5-a823-ac32834792e2/Untitled.png)
-
-df4 (KNN 기법 사용)
+<div style="display:flex;">
+    <div style="text-align:center; margin-right:20px;">
+        <img src="https://github.com/PARKYUNSU/chun/assets/125172299/9fcb48f3-b31c-48a0-ae46-0a379007cfbe" width="400">
+        <p>df1 (최빈값 대체)</p>
+    </div>
+    <div style="text-align:center; margin-right:20px;">
+        <img src="https://github.com/PARKYUNSU/chun/assets/125172299/22230ff9-244f-4c79-b23f-9672012201c9" width="400">
+        <p>완전삭제</p>
+    </div>
+    <div style="text-align:center;">
+        <img src="https://github.com/PARKYUNSU/chun/assets/125172299/32af11dd-8ce3-44bf-b1c8-b7094161f4af" width="400">
+        <p>Hot-Deck 방법 사용</p>
+    </div>
+</div>
+<div style="display:flex;">
+    <div style="text-align:center; margin-right:20px;">
+        <img src="https://github.com/PARKYUNSU/chun/assets/125172299/8d75e08b-9597-4f9a-acb6-602728c40343" width="400">
+        <p>KNN 기법 사용</p>
+    </div>
+    <div style="text-align:center;">
+        <img src="https://github.com/PARKYUNSU/chun/assets/125172299/5a434f52-6645-492e-8786-3ae0d677c1af" width="400">
+        <p>결측값 사용</p>
+    </div>
+</div>
 
 각 곡선은 df1 부터 df5 까지 13개 차원 분산 중 첫 번째 N개의 구성 요소에 얼마나 많은 분산이 포함되어 있는지 나타냅니다.
 
@@ -172,25 +180,15 @@ Precision 및 Recall 면에서도 df5 데이터 프레임에서 가장 높은 �
 
 **ROC 커브**
 
-![df1 (최빈값)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/678c8274-8cf9-4b86-8a72-66bbb6cf9d65/Untitled.png)
 
-df1 (최빈값)
+<img src="https://github.com/PARKYUNSU/chun/assets/125172299/3a961d26-f10b-40d5-9a57-afe3699fc9e2" alt="image_12" style="width:30%">
+<img src="https://github.com/PARKYUNSU/chun/assets/125172299/192eb2db-f3a6-4cf7-a443-737d317eb0bc" alt="image_13" style="width:30%">
 
-![df2 (완전삭제)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/78608351-7ed3-431f-95f7-0755c4dd820f/Untitled.png)
+<img src="https://github.com/PARKYUNSU/chun/assets/125172299/314cba59-63b9-4cc5-9413-688d3faada9f" alt="image_14" style="width:30%">
+<img src="https://github.com/PARKYUNSU/chun/assets/125172299/d8c1cda6-4aa0-4b7c-a45d-03e3b582badb" alt="image_15" style="width:30%">
 
-df2 (완전삭제)
+<img src="https://github.com/PARKYUNSU/chun/assets/125172299/1d06d065-0c30-476c-a74f-bb534618be1e" alt="image_16" style="width:30%">
 
-![df3 (Hot-dect 방법 사용)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/ca6524e5-570a-4e6e-9336-378f71708407/Untitled.png)
-
-df3 (Hot-dect 방법 사용)
-
-![df4 (KNN 기법 사용)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/5d23e76e-b22e-46ec-9d9d-86163947c1fb/Untitled.png)
-
-df4 (KNN 기법 사용)
-
-![df5 (결측값 사용)](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/ea8ea5cb-8bf1-4303-89fd-5a796bf101c2/Untitled.png)
-
-df5 (결측값 사용)
 
 ### **정리**
 
@@ -200,13 +198,15 @@ Random Forest Classifier(RFC)와 Extreme Gradient Boosting Classifier(XGBC) 모�
 
 위의 방법으로 선택된 df2 (완전삭제) 데이터와 XGBoost 모델을 활용하여 어떤 요소가 고객의 이탈률에 얼마나 영향을 끼쳤는지를 확인하여 신용카드 회사의 서비스를 개선하고자 합니다.
 
-![XGBoost 특성 중요도 TOP10](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/b3f91223-338d-4da8-aae3-83acccdbe183/Untitled.png)
-
 XGBoost 특성 중요도 TOP10
 
-![SHAP로 본 특성 별 예측에 미치는 관계](https://prod-files-secure.s3.us-west-2.amazonaws.com/e891e8e2-77a2-429a-a5aa-64d52c2b477e/89081f72-1acd-44c1-9507-9f552b5ff9fc/Untitled.png)
+<img src="https://github.com/PARKYUNSU/chun/assets/125172299/9543222b-c75b-4d92-bb7d-95595bc3d0ca" alt="image_16" style="width:60%">
+
 
 SHAP로 본 특성 별 예측에 미치는 관계
+
+<img src="https://github.com/PARKYUNSU/chun/assets/125172299/9c516a71-2563-48ed-8023-5a1de1247748" alt="image_16" style="width:60%">
+
 
 ### **해석**
 
