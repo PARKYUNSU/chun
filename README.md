@@ -6,6 +6,8 @@
 
 ### **목표**
 
+---
+
 이 프로젝트의 목표는 신용카드 고객 이탈 예측 모델을 개발하여, 고객의 이탈 가능성을 사전에 예측하고 이를 방지하기 위한 맞춤형 전략을 수립하는 것입니다.
 
 ### **데이터 및 전처리**
@@ -29,6 +31,8 @@
 | df3 | Hot-Deck 방법 사용 | 10,127 |
 | df4 | KNN 기법 사용 | 10,127 |
 | df5 | 결측값 사용 | 10,127 |
+
+---
 
 ### 데이터 준비 및 스케일링
 
@@ -82,6 +86,8 @@ VIF가 높고 공차가 낮은 컬럼 제거: 'Customer_Age', 'Months_on_book', 
 2. PCA Min-Max - MinMax를 사용하여 스케일링한 후 PCA를 수행하여, 첫 8개의 구성 요소가 전체 분산의 90%를 포함하고 있습니다.
 3. PCA Power Transformer - Power Transformer를 사용하여 스케일링한 후 PCA를 수행하여, 첫 10개의 구성 요소가 전체 분산의 90%를 포함하고 있습니다.
 
+---
+
 ### **모델링 및 성능 비교**
 
 **데이터 불균형 해소**
@@ -90,6 +96,7 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 다수 클래스에 치우쳐 학습되는 현상인 불균형 문제를 해결하기 위한 오버샘플링 기법 모델 SMOTE 사용
 
 각 데이터프레임에 대해 다섯 가지 모델(KNN, RFC, XGBC, LR, SVC)을 학습시키고, 성능을 평가하였습니다.
+
 
 **모델 성능 평가 지표**
 
@@ -178,8 +185,9 @@ df5에서 가장 높은 Accuracy(0.81)와 F1-score(0.88)를 df5 보임
 
 Precision 및 Recall 면에서도 df5 데이터 프레임에서 가장 높은 성능
 
-**ROC 커브**
+---
 
+**ROC 커브**
 
 <img src="https://github.com/PARKYUNSU/chun/assets/125172299/3a961d26-f10b-40d5-9a57-afe3699fc9e2" alt="image_12" style="width:30%">
 <img src="https://github.com/PARKYUNSU/chun/assets/125172299/192eb2db-f3a6-4cf7-a443-737d317eb0bc" alt="image_13" style="width:30%">
@@ -189,10 +197,13 @@ Precision 및 Recall 면에서도 df5 데이터 프레임에서 가장 높은 �
 
 <img src="https://github.com/PARKYUNSU/chun/assets/125172299/1d06d065-0c30-476c-a74f-bb534618be1e" alt="image_16" style="width:30%">
 
+---
 
 ### **정리**
 
 Random Forest Classifier(RFC)와 Extreme Gradient Boosting Classifier(XGBC) 모델이 df2 데이터 프레임에서 가장 좋은 성능을 보임
+
+---
 
 ### **제공 서비스**
 
@@ -232,6 +243,7 @@ SHAP로 본 특성 별 예측에 미치는 관계
 
 고객의 카드 보유 수가 많을수록 이탈할 가능성이 낮아질 수 있습니다.
 
+---
 ### 서비스 기획
 
 ### 1. 고객에게 맞춤형 혜택 제공:
@@ -248,6 +260,7 @@ SHAP로 본 특성 별 예측에 미치는 관계
 4. 신규 고객 유치를 위한 마케팅 전략:
 카드 보유 수가 이탈 가능성에 영향을 미친다는 것을 고려하여, 새로운 고객을 유치하기 위해 혜택이나 프로모션을 제공하고, 이를 통해 고객들을 계속 유지하도록 유도할 수 있습니다.
 
+---
 ### **결과 및 해석**
 
 - Random Forest Classifier(RFC)와 Extreme Gradient Boosting Classifier(XGBC) 모델이 모든 데이터프레임에서 가장 높은 성능을 보였습니다.
