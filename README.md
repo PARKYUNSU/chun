@@ -36,7 +36,7 @@
 
 ## 데이터 준비 및 스케일링
 
-**다중공선성 평가**
+### **다중공선성 평가**
 
 VIF가 높고 공차가 낮은 컬럼 제거: 'Customer_Age', 'Months_on_book', 'Credit_Limit', 'Total_Revolving_Bal', 'Avg_Open_To_Buy', 'Total_Trans_Ct'
 
@@ -53,7 +53,7 @@ VIF가 높고 공차가 낮은 컬럼 제거: 'Customer_Age', 'Months_on_book', 
 | Income_Category * | 12.70 | 8.62 | 0.12 | 0.08 |
 | Total_Ct_Chng_Q4_Q1 | 11.84 | 11.82 | 0.08 | 0.08 |
 
-**PCA 평가**
+### **PCA 평가**
 
 <div style="display:flex;">
     <div style="text-align:center; margin-right:20px;">
@@ -90,7 +90,7 @@ VIF가 높고 공차가 낮은 컬럼 제거: 'Customer_Age', 'Months_on_book', 
 
 ## **모델링 및 성능 비교**
 
-**데이터 불균형 해소**
+### **데이터 불균형 해소**
 
 SMOTE (Synthetic Minority Over-sampling Technique)
 다수 클래스에 치우쳐 학습되는 현상인 불균형 문제를 해결하기 위한 오버샘플링 기법 모델 SMOTE 사용
@@ -98,7 +98,7 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 각 데이터프레임에 대해 다섯 가지 모델(KNN, RFC, XGBC, LR, SVC)을 학습시키고, 성능을 평가하였습니다.
 
 
-**모델 성능 평가 지표**
+### **모델 성능 평가 지표**
 
 - Accuracy(정확도)
 - Precision(클래스 1에 대한 정밀도)
@@ -106,7 +106,7 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 - F1-score(평균 F1 점수)
 - AUC(Area Under the ROC Curve)
 
-### **최빈값 대체 (df1)**
+#### **최빈값 대체 (df1)**
 
 | 모델 | 정확도 | 정밀도 | 재현율 | F1 점수 | AUC |
 | --- | --- | --- | --- | --- | --- |
@@ -116,7 +116,7 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 | LR | 0.84 | 0.79 | 0.86 | 0.82 | 0.89 |
 | SVC | 0.87 | 0.83 | 0.89 | 0.86 | 0.92 |
 
-### **완전 삭제 (df2)**
+#### **완전 삭제 (df2)**
 
 | 모델 | 정확도 | 정밀도 | 재현율 | F1 점수 | AUC |
 | --- | --- | --- | --- | --- | --- |
@@ -126,7 +126,7 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 | LR | 0.86 | 0.81 | 0.88 | 0.84 | 0.90 |
 | SVC | 0.87 | 0.83 | 0.89 | 0.86 | 0.92 |
 
-### **Hot-Deck 방법 사용 (df3)**
+#### **Hot-Deck 방법 사용 (df3)**
 
 | 모델 | 정확도 | 정밀도 | 재현율 | F1 점수 | AUC |
 | --- | --- | --- | --- | --- | --- |
@@ -136,7 +136,7 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 | LR | 0.85 | 0.80 | 0.86 | 0.83 | 0.90 |
 | SVC | 0.87 | 0.83 | 0.89 | 0.86 | 0.92 |
 
-### **KNN 기법 사용 (df4)**
+#### **KNN 기법 사용 (df4)**
 
 | 모델 | 정확도 | 정밀도 | 재현율 | F1 점수 | AUC |
 | --- | --- | --- | --- | --- | --- |
@@ -146,7 +146,7 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 | LR | 0.84 | 0.79 | 0.86 | 0.82 | 0.89 |
 | SVC | 0.87 | 0.83 | 0.89 | 0.86 | 0.92 |
 
-### **결측값 사용 (df5)**
+#### **결측값 사용 (df5)**
 
 | 모델 | 정확도 | 정밀도 | 재현율 | F1 점수 | AUC |
 | --- | --- | --- | --- | --- | --- |
@@ -155,31 +155,32 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 | XGBC | 0.90 | 0.87 | 0.90 | 0.88 | 0.93 |
 | LR | 0.84 | 0.79 | 0.86 | 0.82 | 0.89 |
 | SVC | 0.87 | 0.83 | 0.89 | 0.86 | 0.92 |
-- KNN 모델
+
+#### - KNN 모델
 
 df2 에서 가장 높은 Accuracy(0.78)와 F1-score(0.87)를 보임
 
 Precision 및 Recall 면에서는 일관된 결과
 
-- RFC 모델
+#### - RFC 모델
 
 df2 에서 가장 높은 Accuracy(0.98)와 F1-score(0.99)를 보임
 
 Precision 및 Recall 면에서도 df2 에서 가장 높은 성능
 
-- XGBC 모델
+#### - XGBC 모델
 
 df2 에서 가장 높은 Accuracy(0.97)와 F1-score(0.98)를 보임
 
 Precision 및 Recall 면에서도 df2 에서 가장 높은 성능
 
-- Logistic Regression 모델
+#### - Logistic Regression 모델
 
 df5 에서 가장 높은 Accuracy(0.74)를 보임, 그러나 전체적으로 성능이 다소 낮음
 
 다른 모델에 비해 Precision 및 Recall 면에서도 상대적으로 성능이 낮음
 
-- SupportVectorMachine 모델
+#### - SupportVectorMachine 모델
 
 df5에서 가장 높은 Accuracy(0.81)와 F1-score(0.88)를 df5 보임
 
@@ -187,7 +188,7 @@ Precision 및 Recall 면에서도 df5 데이터 프레임에서 가장 높은 �
 
 ---
 
-**ROC 커브**
+### **ROC 커브**
 
 <img src="https://github.com/PARKYUNSU/chun/assets/125172299/3a961d26-f10b-40d5-9a57-afe3699fc9e2" alt="image_12" style="width:30%">
 <img src="https://github.com/PARKYUNSU/chun/assets/125172299/192eb2db-f3a6-4cf7-a443-737d317eb0bc" alt="image_13" style="width:30%">
