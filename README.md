@@ -156,35 +156,15 @@ SMOTE (Synthetic Minority Over-sampling Technique)
 | LR | 0.84 | 0.79 | 0.86 | 0.82 | 0.89 |
 | SVC | 0.87 | 0.83 | 0.89 | 0.86 | 0.92 |
 
-#### - KNN 모델
+### 정리
 
-df2 에서 가장 높은 Accuracy(0.78)와 F1-score(0.87)를 보임
-
-Precision 및 Recall 면에서는 일관된 결과
-
-#### - RFC 모델
-
-df2 에서 가장 높은 Accuracy(0.98)와 F1-score(0.99)를 보임
-
-Precision 및 Recall 면에서도 df2 에서 가장 높은 성능
-
-#### - XGBC 모델
-
-df2 에서 가장 높은 Accuracy(0.97)와 F1-score(0.98)를 보임
-
-Precision 및 Recall 면에서도 df2 에서 가장 높은 성능
-
-#### - Logistic Regression 모델
-
-df5 에서 가장 높은 Accuracy(0.74)를 보임, 그러나 전체적으로 성능이 다소 낮음
-
-다른 모델에 비해 Precision 및 Recall 면에서도 상대적으로 성능이 낮음
-
-#### - SupportVectorMachine 모델
-
-df5에서 가장 높은 Accuracy(0.81)와 F1-score(0.88)를 df5 보임
-
-Precision 및 Recall 면에서도 df5 데이터 프레임에서 가장 높은 성능
+| 모델 | 데이터프레임 (가장 높은 성능) | 정확도 | 정밀도 | 재현율 | F1 점수 |
+| --- | --- | --- | --- | --- | --- |
+| KNN | df2 | 0.88 | 0.84 | 0.89 | 0.86 |
+| RFC | df2 | 0.87 | 0.90 | 0.88 | 0.93 |
+| XGBC | df2 | 0.86 | 0.89 | 0.87 | 0.92 |
+| Logistic Regression | df5 | 0.84 | 0.79 | 0.86 | 0.82 |
+| Support Vector Machine | df5 | 0.87 | 0.83 | 0.89 | 0.86 |
 
 ---
 
